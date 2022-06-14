@@ -1,0 +1,84 @@
+body{
+    background-color: #030027;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(100px, auto) repeat(5, 100px);
+    border: solid 12px #FEA82F;
+}
+
+.calculator-display{
+    grid-column: span 4;
+    background-color: rgba(196, 214, 176, 0.9);
+    font-family: 'Share Tech Mono', monospace;
+    word-wrap: break-word;
+    word-break: break-all;
+    padding: 10px;
+    font-size: 2rem;
+    color:  #030027;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+button {
+    font-size: 1.25rem;
+    font-family: 'Share Tech Mono', monospace;
+    background-color: #F2F3D9;
+    color: #030027;
+    cursor: pointer;
+    border: none;
+}
+
+.clear, .equals {
+    grid-column: span 2;
+}
+
+.clear, .delete {
+    background-color: #F67E7D;
+    color: white;
+
+}
+
+.operator {
+    background-color: #843B62;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.equals {
+    background-color: #FFB997;
+    font-size: 1.5rem;
+    color: white;
+}
+
+#calculator > button.digit:hover {
+    background-color: #dfe0cb;
+}
+
+
+#calculator > button.operator:hover {
+    background-color: #421d30;
+}
+
+#calculator > button.operator:active {
+    background-color: #843B62;
+}
+
+#calculator > button.delete:hover, button.clear:hover {
+    background-color: #d55353;
+}
+
+#calculator > button.equals:hover {
+    background-color: #ee976d;
+}
+
+
+
